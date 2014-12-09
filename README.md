@@ -1,6 +1,6 @@
 # Summary
 
-A few days ago, Google has introduced a [new version of ReCaptcha](http://googleonlinesecurity.blogspot.fr/2014/12/are-you-robot-introducing-no-captcha.html), theorically allowing most users to complete it by only ticking a checkbox. If the user isn't deemed as human by Google, the old version with distorted text appears. Although I used a normal Firefox version, I still had to fill the text captcha after clicking, so it didn't really worked for me. My curiosity induced me to look at the JavaScript in order to know how all this really works...
+A few days ago, Google has introduced a [new version of ReCaptcha](http://googleonlinesecurity.blogspot.com/2014/12/are-you-robot-introducing-no-captcha.html), theorically allowing most users to complete it by only ticking a checkbox. If the user isn't deemed as human by Google, the old version with distorted text appears. Although I used a normal Firefox version, I still had to fill the text captcha after clicking, so it didn't really worked for me. My curiosity induced me to look at the JavaScript in order to know how all this really works...
 
 # What happens on the wire
 
@@ -55,7 +55,7 @@ This information, along with numeric values hardcoded in the bytecode (forcing a
 We could:
 
 * Make statistics about when the checkbox-captcha suffices and when it doesn't.
-* Programmatically bypassing the captcha by interpreting bytecode.
-* Programmatically bypassing the captcha by simply executing a rendering engine and automating movements of the mouse. But it would be slighty less funny.
+* Programmatically bypass the captcha by interpreting bytecode.
+* Programmatically bypass the captcha by simply executing a rendering engine and automating movements of the mouse. But it would be slighty less funny.
 
 Cheers and good reversing!
