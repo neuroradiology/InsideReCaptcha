@@ -22,7 +22,7 @@ The first parameter is the bytecode interpreter. After trimming the `(function()
 
 The interpreter has two entry points: the `M` function which is executed when ReCaptcha is loaded, and `M.prototype.ha` which is executed when you click the checkbox, and that returns the information for Google servers.
 
-I first discovered that the bytecode was encrypted using the [XTEA](https://en.wikipedia.org/wiki/XTEA) algorithm. Each block of 8 bytes is xored with a keystream (so decryption and encryption functions are the same), where the first 32-bit word of ciphertext is read from the bytecode file, the second 32-bit word is the position in the bytecode file divided by 8, and the key is *by default* `[0, 0, 0, 0]`.
+I first discovered that the bytecode was encrypted using the [XTEA](https://en.wikipedia.org/wiki/XTEA) algorithm. Each block of 8 bytes is xored with a keystream (so decryption and encryption functions are the same), where the first 32-bit word of plaintext is read from the bytecode file, the second 32-bit word is the position in the bytecode file divided by 8, and the key is *by default* `[0, 0, 0, 0]`.
 
 By default... because it would have been too simple: it turns out the bytecode has direct access to JavaScript variables of its *own* interpreter, and changes its *own* decryption key and even its *own* opcodes numbers at many points.
 
