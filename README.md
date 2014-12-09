@@ -46,11 +46,11 @@ Google servers will receive and process, at least, the following information:
 * Likely cookies server-side (it's executed on the www.google.com domain)
 * And likely other stuff...
 
-You can at the decompiled bytecode for more precision.
+You can look at the decompiled bytecode for more precision.
 
 This information, along with numeric values hardcoded in the bytecode (forcing a potential bot to read all of it), is send to the `https://www.google.com/recaptcha/api2/frame` page. Look at the `M.prototype.Q` function to see how the encoding process is realized. Some of information (the one I call `xhr2` in the decompiler, which is retrieved in the `this.c[this.g]` variable − `xhr1` is in `this.c[this.d]`) is also encrypted with XTEA.
 
-# What next...
+# What's next...
 
 We could:
 
