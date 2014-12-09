@@ -10,7 +10,7 @@ First, the browser makes the few following requests:
 * `https://www.gstatic.com/recaptcha/api2/r20141202135649/recaptcha__en.js`, which contains common code.
 * `https://apis.google.com/_/scs/apps-static/_/js/` (followed by a bunch of more or less cryptic parameters) which contains other common JavaScript code.
 
-The browser then makes a requests to `https://www.google.com/recaptcha/api2/anchor`, whose response with contains the very interesting stuff: a callback to a function called `recaptcha.anchor.Main.init`, which contains two base64-encoded parameters.
+The browser then makes a requests to `https://www.google.com/recaptcha/api2/anchor`, whose response contains the very interesting stuff: a callback to a function called `recaptcha.anchor.Main.init`, which contains two base64-encoded parameters.
 
 The first parameter points to a JavaScript file: [`https://www.google.com/js/bg/6yg-ggdQgQAg8SAADJkAjc-JMNnOnYuIGgH_iBV7uf8.js`](https://www.google.com/js/bg/6yg-ggdQgQAg8SAADJkAjc-JMNnOnYuIGgH_iBV7uf8.js). The second one contains *double-*base64-encoded binary data.
 
