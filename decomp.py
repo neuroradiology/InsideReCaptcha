@@ -6,7 +6,7 @@ from copy import copy
 
 """
 Recaptcha decompiler - 0.1
-By the anonymous ReCaptchaReverser
+By the ReCaptchaReverser
 I release this to public domain.
 """
 

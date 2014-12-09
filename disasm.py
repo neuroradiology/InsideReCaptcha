@@ -5,7 +5,7 @@ from re import search, sub
 
 """
 Recaptcha disassembler - 0.1
-By the anonymous ReCaptchaReverser
+By the ReCaptchaReverser
 I release this to public domain.
 """
 
